@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow rounded-4">
+          <div class="card-body p-5">
+            <h2 class="card-title text-center mb-4">Login</h2>
+
+            <!-- Alert area -->
+            <div id="alertBox" class="alert d-none" role="alert"></div>
+
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Enter password"
+                  required
+                />
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Login
+                </button>
+              </div>
+            </form>
+
+            <div class="text-center mt-3">
+              <small>Don't have an account? <a href="/pages/sign-up.html">Sign up</a></small>
+            </div>
+
+            <!-- Admin Data Table - Hidden by default -->
+            <div id="adminData" class="mt-5 d-none">
+              <h3 class="text-center">Admin Dashboard - Enrollment Data</h3>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Phone</th>
+                  </tr>
+                </thead>
+                <tbody id="userData">
+                  <!-- Dynamic content will go here -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Success Message for users -->
+            <div id="successMessage" class="mt-5 d-none">
+              <h3 class="text-center">Login successful!</h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container text-center">
+  <a href="/index.html" class="btn btn-primary text-white mt-3">Back to Home</a>
+</div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Login JS -->
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const alertBox = document.getElementById('alertBox');
+    const adminData = document.getElementById('adminData');
+    const userData = document.getElementById('userData');
+    const successMessage = document.getElementById('successMessage');
+    const loginCard = document.querySelector('.card');
+
+    loginForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await fetch('/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          showAlert('success', 'Login successful!');
+          
+          // Check if the user is an admin
+          if (data.role === 'admin') {
+            // Show the admin dashboard with enrollment data
+            adminData.classList.remove('d-none');
+            displayEnrollmentData(data.entries); // Display enrollment data for admin
+          } else {
+            // Show successful login message for non-admin users
+            successMessage.classList.remove('d-none');
+          }
+        } else {
+          showAlert('danger', data.message || 'Invalid email or password');
+        }
+      } catch (err) {
+        showAlert('danger', 'An error occurred. Please try again.');
+        console.error(err);
+      }
+    });
+
+    function showAlert(type, message) {
+      alertBox.className = `alert alert-${type}`;
+      alertBox.textContent = message;
+      alertBox.classList.remove('d-none');
+    }
+
+    // Function to display enrollment data for admin
+    function displayEnrollmentData(entries) {
+      userData.innerHTML = ''; // Clear any existing data
+      entries.forEach(entry => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${entry.id}</td>
+          <td>${entry.firstName}</td>
+          <td>${entry.lastName}</td>
+          <td>${entry.phone}</td>
+        `;
+        userData.appendChild(row);
+      });
+    }
+  </script>
+</body>
+</html>

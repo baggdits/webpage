@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+        
+</head>
+<body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-expand-sm py-3 fixed-top bg-dark"> 
+
+        <div class="container">
+            <a href="#" class="navbar-brand text-light" >Philology Class</a>
+            <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navmenu"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="pages/ancient.html" class="nav-link text-light">Ancient</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/latin.html" class="nav-link text-light">Latin</a>
+                          
+                            <li class="nav-item">
+                                <a href="pages/modern.html" class="nav-link text-light">Modern Greek</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a href="pages/sign-up.html" class="btn btn-primary mx-2">Sign up</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a href="pages/login.html" class="btn btn-primary">log in</a>
+                                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+    <!--Showcase-->
+    <section class="bg-image txet-dark p-5 p-lg-0 pt-lg-5 text-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-">
+            
+                <div>
+                    <h1>Kallithea Krapi</h1>
+                    <p class="lead">
+                        I have a degree in philology from the university of Ioanina city in Greece<br>
+                        I have worked with lot of students and the results were great<br>
+                        <strong>If you are a student come and learn with me </strong>
+                    </p>
+                    <button class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#Enroll">Begin Course</button>
+                    </div>
+                    <img src="assets/krapi2.jpg" alt="" class="krapi-img border border-dark">
+            </div>
+    </div>
+    </section>
+
+
+<!-- Boxes -->
+<section class="p-5 bg-image">
+  <div class="container">
+    <div class="row text-center g-2">
+      
+      <!-- Books Card -->
+      <div class="col-md col-lg-4">
+        <div class="card bg-dark text-light" id="books-card">
+          <div class="card-body text-center">
+            <i class="bi bi-book h1 mb-3"></i>
+            <h3 class="card-title mb-3">Books</h3>
+            <div class="scroll-container">
+              <p class="card-text scroll-text">Books Notes and Etc</p>
+            </div>
+            <div id="books-more-text" class="collapse">
+              <p class="card-text">
+                This section includes detailed notes, rare book excerpts, grammar explanations, and commentaries useful for philology students.
+              </p>
+            </div>
+            <button id="books-read-more" class="btn-read-more">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Courses Card -->
+      <div class="col-md col-lg-4">
+        <div class="card bg-secondary text-light" id="courses-card">
+          <div class="card-body text-center">
+            <i class="bi bi-laptop h1 mb-3"></i>
+            <h3 class="card-title mb-3">Courses</h3>
+            <div class="scroll-container">
+              <p class="card-text scroll-text">Courses Notes and Etc</p>
+            </div>
+            <div id="courses-more-text" class="collapse">
+              <p class="card-text">
+                This section includes detailed notes, rare book excerpts, grammar explanations, and commentaries useful for philology students.
+              </p>
+            </div>
+            <button id="courses-read-more" class="btn-read-more">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Card -->
+      <div class="col-md col-lg-4">
+        <div class="card bg-dark text-light" id="other-card">
+          <div class="card-body text-center">
+            <i class="bi bi-flag h1 mb-3"></i>
+            <h3 class="card-title mb-3">Other</h3>
+            <div class="scroll-container">
+              <p class="card-text scroll-text">Other</p>
+            </div>
+            <div id="other-more-text" class="collapse">
+              <p class="card-text">
+                This section includes detailed notes, rare book excerpts, grammar explanations, and commentaries useful for philology students.
+              </p>
+            </div>
+            <button id="other-read-more" class="btn-read-more">Read More</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+ <!--learn sections-->
+ <section id="learn" class="p-5 bg-image">
+    <div class="container bg-secondary text-dark">
+        <div class="row align-items-center justify-content-between">
+            
+           
+            <div class="col-md-6 text-start p-5">
+                <h2>Learn The Fundamentals</h2>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iure velit nisi in nihil aut consequuntur cupiditate obcaecati rerum laboriosam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam blanditiis corrupti voluptas eveniet inventore dolore.
+                </p>
+                  <!-- Hidden extra text -->
+  <div id="fundamentals-more-text" class="collapse">
+    <p>
+      This extra paragraph explains foundational principles in more depth, giving you insight into language structures and etymology.
+    </p>
+  </div>
+
+  <a href="#" id="fundamentals-read-more" class="btn btn-dark mt-3">Read More</a>
+</div>
+                
+
+          
+            <div class="col-md-6 text-end">
+                <img src="assets/fund.jpg" class="img-fluid w-75 d-none d-sm-block" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div class="container bg-dark text-light">
+        <div class="row align-items-center justify-content-between">
+            
+            <div class="col-md-6 text-start">
+                <img src="assets/other.png" class="img-fluid w-75 d-none d-sm-block" alt="">
+            </div>
+
+            <div class="col-md-6 text-start p-5">
+                <h2>Learn Other</h2>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iure velit nisi in nihil aut consequuntur cupiditate obcaecati rerum laboriosam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam blanditiis corrupti voluptas eveniet inventore dolore.
+                </p>
+
+                 <!-- Hidden extra text -->
+  <div id="other1-more-text" class="collapse">
+    <p>
+      This extra paragraph explains foundational principles in more depth, giving you insight into language structures and etymology.
+    </p>
+  </div>
+
+  <a href="#" id="other1-read-more" class="btn btn-secondary mt-3">Read More</a>
+</div>
+
+          
+            
+
+        </div>
+    </div>
+</section>
+
+<!--Question-->
+<section id="questions" class="p-5 bg-image">
+    <div class="container">
+        <h2 class="text-center mb-4">Frequently asked questions</h2>
+        <div class="accordion accordion-flush" id="questions">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+                  Where can we locate you?
+                </button>
+              </h2>
+              <div id="question-one" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">I am living in Kastoria city </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                  How much will a course cost?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">The price is not always the same.It is accoringly the class of the student</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" >
+                  Other
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non pariatur cupiditate dolores eveniet corporis maxime labore! Minus tempora assumenda libero?</div>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
+
+<!--Critics-->
+<section id="Students" class="p-5 bg-image">
+<div class="container">
+    <h2 class="text-center text-dark">Our Students</h2>
+    <p class="lead text-center text-dark mb-5">
+   Our Students that learnt from us and now are working in their dream job
+    </p>
+    <div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+                <img src="https://randomuser.me/api/portraits/men/6.jpg" class="rounded-circle mb-3" alt=""/>
+                <h3 class="card-title mb-3">John Mask</h3>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
+                </p>
+                <a href="https://x.com/?lang=en" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Follow us on Twitter">
+  <i class="bi bi-twitter text-light mx-1" aria-hidden="true"></i>
+</a>
+            </div>
+            </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+                <img src="https://randomuser.me/api/portraits/women/6.jpg" class="rounded-circle mb-3" alt=""/>
+                <h3 class="card-title mb-3">Helen Morgan</h3>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
+                </p>
+                <a href="https://x.com/?lang=en" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Follow us on Twitter">
+  <i class="bi bi-twitter text-light mx-1" aria-hidden="true"></i>
+</a>
+            </div>
+            </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+                <img src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-circle mb-3" alt=""/>
+                <h3 class="card-title mb-3">Rick Stone</h3>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
+                </p>
+                <a href="https://x.com/?lang=en" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Follow us on Twitter">
+  <i class="bi bi-twitter text-light mx-1" aria-hidden="true"></i>
+</a>
+            </div>
+            </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+                <img src="https://randomuser.me/api/portraits/women/11.jpg" class="rounded-circle mb-3" alt=""/>
+                <h3 class="card-title mb-3">Marsha Botek</h3>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
+                </p>
+                <a href="https://x.com/?lang=en" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Follow us on Twitter">
+  <i class="bi bi-twitter text-light mx-1" aria-hidden="true"></i>
+</a>
+            </div>
+            </div>
+    </div>
+</div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="bg-dark text-light p-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h3 class="mb-3 mb-md-0">Sign up for News</h3>
+
+      <div class="input-group news-input">
+        <input type="email" class="form-control" id="email" autocomplete="email" placeholder="Enter Email" />
+        <button class="btn btn-warning" type="button" id="submitBtn">Submit</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Success Modal -->
+<div class="modal" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Success</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Your email has been successfully signed up for the newsletter!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Contact-->
+<section class="p-5 bg-image">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md">
+                <h2 class="text-center mb-4">Contact info</h2>
+                <ul class="list-group list-group-flush lead">
+                    <li class="list-group-item bg-dark text-light">
+                        <span class="fw-bold">Main location:</span><span class="ms-4">Kastoria</span>
+                        <li class="list-group-item bg-dark text-light">
+                        <span class="fw-bold">Main Phone:</span><span class="ms-4">6969696969</span>
+                        <li class="list-group-item bg-dark text-light">
+                        <span class="fw-bold">Secondary Phone:</span><span class="ms-4">2222222222</span>
+                        <li class="list-group-item bg-dark text-light">
+                        <span class="fw-bold">Main E-mail:</span><span class="ms-4">@@</span>
+                        <li class="list-group-item bg-dark text-light">
+                        <span class="fw-bold">Secondary E=mail:</span><span class="ms-4">@@@</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <div id="map" class="mt-4 ms-5"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<footer class="p-3 bg-dark text-white text-center position-relative">
+    <div class="container">
+        <p class="lead">Copyright &copy;2025 Philology Class</p>
+        <div class="scroll-to-top-wrapper text-end mt-5">
+          <a href="#top" 
+          id="back-to-top" 
+          class="position-absolute" 
+          aria-label="Back to top" 
+          title="Back to top">
+         <i class="bi bi-arrow-up-circle h1 text-white" aria-hidden="true"></i>
+       </a>
+       
+            <p class="text-start">By using our website, you agree to our <a href="pages/terms.html" style="text-decoration: none; display: inline; padding: 0; position: relative; top: -2px;" class="btn btn-link">Terms & Conditions</a>.</p>
+          
+            
+</div>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="Enroll" tabindex="-1" aria-labelledby="EnrollLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="EnrollLabel">Personal Info</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">Fill the form and we will reach you</p>
+
+        <form method="POST" action="/submit-enroll">
+          <div class="mb-3">
+            <label for="first-name" class="col-form-label">First Name:</label>
+            <input type="text" class="form-control" id="first-name" name="firstname" autocomplete="given-name">
+          </div>
+          <div class="mb-3">
+            <label for="last-name" class="col-form-label">Last Name:</label>
+            <input type="text" class="form-control" id="last-name" name="lastname" autocomplete="name">
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="col-form-label">Phone Number:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="submit-enroll">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <script>
+        
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYmFnZ2RpdHMiLCJhIjoiY205MWcwaWdyMDBrNzJscXRnYWhxam1tOCJ9.ELzKBflmvFJ3e8cvvDpxnw'; // Replace with your Mapbox access token
+
+        
+        const map = new mapboxgl.Map({
+            container: 'map', 
+            style: 'mapbox://styles/mapbox/streets-v11', 
+            center: [-74.5, 40], 
+            zoom: 9 
+        });
+
+// Modals
+const modal = document.getElementById('Enroll');
+const form = modal.querySelector('form');
+const submitButton = modal.querySelector('.btn-primary');
+const successMessage = document.createElement('div');
+
+const formElements = form.querySelectorAll('input, select, textarea, button');
+
+const disableFocusableElements = () => {
+  formElements.forEach(element => {
+    element.disabled = true;
+    element.setAttribute('tabindex', '-1');
+  });
+
+  submitButton.setAttribute('disabled', 'true');
+};
+
+const enableFocusableElements = () => {
+  formElements.forEach(element => {
+    element.disabled = false;
+    element.removeAttribute('tabindex');
+  });
+
+  submitButton.removeAttribute('disabled');
+};
+
+modal.addEventListener('show.bs.modal', () => {
+  enableFocusableElements();
+});
+
+modal.addEventListener('hidden.bs.modal', () => {
+  disableFocusableElements();
+});
+
+submitButton.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const firstName = document.getElementById('first-name').value;
+  const lastName = document.getElementById('last-name').value;
+  const phone = document.getElementById('phone').value;
+
+  if (!firstName.trim() || !lastName.trim() || !phone.trim()) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  const phonePattern = /^\d{10}$/;
+  if (!phonePattern.test(phone)) {
+    alert("Please enter a valid 10-digit phone number.");
+    return;
+  }
+
+  // Send form data to server for database insertion
+  fetch('/submit-form', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ firstName, lastName, phone })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      successMessage.innerHTML = "<h4>Enrollment Successful!</h4><p>Your submission has been saved.</p>";
+      successMessage.classList.add('alert', 'alert-success', 'text-center');
+      form.insertAdjacentElement('afterend', successMessage);
+
+      setTimeout(() => {
+        window.location.href = 'index.html'; // Redirect after success
+      }, 3000);
+    } else {
+      alert('Error: ' + data.message);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert("An error occurred. Please try again.");
+  });
+});
+
+
+
+
+        // Back to Top Button Scroll
+    document.getElementById('back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
+
+        
+ // Books
+const booksBtn = document.getElementById('books-read-more');
+const booksMoreText = document.getElementById('books-more-text');
+
+booksBtn.addEventListener('click', () => {
+  booksMoreText.classList.toggle('collapse');
+  booksBtn.textContent = booksMoreText.classList.contains('collapse') ? 'Read More' : 'Read Less';
+});
+
+// Courses
+const coursesBtn = document.getElementById('courses-read-more');
+const coursesMoreText = document.getElementById('courses-more-text');
+
+coursesBtn.addEventListener('click', () => {
+  coursesMoreText.classList.toggle('collapse');
+  coursesBtn.textContent = coursesMoreText.classList.contains('collapse') ? 'Read More' : 'Read Less';
+});
+
+// Other
+const otherBtn = document.getElementById('other-read-more');
+const otherMoreText = document.getElementById('other-more-text');
+
+otherBtn.addEventListener('click', () => {
+  otherMoreText.classList.toggle('collapse');
+  otherBtn.textContent = otherMoreText.classList.contains('collapse') ? 'Read More' : 'Read Less';
+});
+
+// Fundamentals
+const fundamentalsBtn = document.getElementById('fundamentals-read-more');
+const fundamentalsMoreText = document.getElementById('fundamentals-more-text');
+
+fundamentalsBtn.addEventListener('click', (e) => {
+  e.preventDefault(); 
+  fundamentalsMoreText.classList.toggle('collapse');
+  fundamentalsBtn.textContent = fundamentalsMoreText.classList.contains('collapse') ? 'Read More' : 'Read Less';
+});
+
+// Other (second)
+const othBtn = document.getElementById('other1-read-more');
+const othMoreText = document.getElementById('other1-more-text');
+
+othBtn.addEventListener('click', (e) => {
+  e.preventDefault(); 
+  othMoreText.classList.toggle('collapse');
+  othBtn.textContent = othMoreText.classList.contains('collapse') ? 'Read More' : 'Read Less';
+});
+
+// Submit button and modal setup
+const submitBtn = document.getElementById('submitBtn');
+const emailInput = document.getElementById('email');
+const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+
+// Regular expression for basic email validation
+const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+submitBtn.addEventListener('click', async () => {
+  const email = emailInput.value.trim();
+
+  // Validate email format
+  if (!email) {
+    alert('Please enter an email address.');
+    return;
+  }
+
+  if (!emailPattern.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  try {
+    // Send email to the server
+    const response = await fetch('/submit-signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      // Show the success popup modal
+      successModal.show();
+
+      // Clear the input field after successful submission
+      emailInput.value = '';
+
+      // Optionally, auto-close the modal after 3 seconds
+      setTimeout(() => {
+        successModal.hide();
+      }, 3000);
+
+    } else {
+      alert(data.message || 'Something went wrong. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again.');
+  }
+});
+
+
+</script>
+</body>
+</html>

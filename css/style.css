@@ -1,0 +1,154 @@
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 50%;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.btn-read-more {
+  color: #007bff;
+  border: none;
+  font-size: 16px;
+  text-decoration: underline;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-read-more:hover {
+  color: #66b3ff;
+}
+
+
+.custom-size {
+  width: 300px;  /* Adjust width to your desired value */
+  height: 250px;  /* Adjust height to your desired value */
+}
+
+
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+  .news-input {
+    max-width: 60%;
+  }
+  }
+  #books-more-text {
+    transition: all 0.4s ease;
+  }
+
+ 
+
+
+
+    .small-right-img {
+        width: 200px; 
+        margin-left: auto;
+        display: block;
+    }
+    body {
+        background-image: url('/assets/bg.jpg'); /* Replace with your image path */
+        background-size: cover;
+        background-attachment: fixed; /* Keeps image in place while scrolling */
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .accordion-button::after {
+        filter: invert(1); /* Inverts the color, making it white */
+      }
+
+      .krapi-img {
+        position: relative;
+        top: 5px;         /* Moves it up */
+        left: 100px;         /* Moves it right */
+        width: 30%;        /* Makes it wider */
+        max-width: none;    /* Prevent Bootstrap from capping width */
+        display: block;
+        order: 4px solid black; /* Add black border */
+        border-radius: 4px;   
+      }
+  /* Footer Styles */
+footer {
+    position: relative;  /* Ensure the footer is the reference point for absolute positioning */
+  }
+  
+  /* Back to Top Button Styles */
+  #back-to-top {
+    position: absolute;      /* Position relative to the container */
+    bottom: 50px;            /* Set distance from the bottom of the container */
+    right: 180px;             /* Set distance from the right of the container */
+    z-index: 9999;           /* Ensure it's above other content inside the container */
+    font-size: 2rem;         /* Set the size of the arrow */
+    transition: color 0.3s ease;
+  }
+  
+  /* Arrow Color */
+  #back-to-top i {
+    color: white;
+  }
+  
+  /* Hover Effect */
+  #back-to-top:hover i {
+    color: #f0f0f0;  /* Slightly lighter white on hover */
+  }
+  
+  /* Optional: Smooth Scroll for the Page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Basic styling for the "Read More" button */
+.books-read-more{
+  background-color: #007bff;  /* Blue background */
+  color: white;  /* White text */
+  border: none;  /* Remove default border */
+  padding: 10px 20px;  /* Add padding to the button */
+  font-size: 16px;  /* Set font size */
+  border-radius: 5px;  /* Round the corners */
+  cursor: pointer;  /* Show a pointer cursor on hover */
+  transition: background-color 0.3s ease;  /* Smooth transition on hover */
+}
+
+/* Hover effect */
+.books-read-more:hover {
+  background-color: #0056b3;  /* Darker blue background on hover */
+}
+
+/* Active effect (when button is clicked) */
+.books-read-more:active {
+  background-color: #004085;  /* Even darker blue when clicked */
+}
+
+/* Focus effect (when button is focused) */
+.books-read-more:focus {
+  outline: none;  /* Remove the default focus outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* Custom blue focus shadow */
+}
+
+  
