@@ -73,7 +73,7 @@ body::before {
         display: block;
     }
     body {
-        background-image: url('/assets/bg.jpg'); /* Replace with your image path */
+        background-image: url('https://baggdits.github.io/webpage/assets/bg.jpg'); /* Replace with your image path */
         background-size: cover;
         background-attachment: fixed; /* Keeps image in place while scrolling */
         background-repeat: no-repeat;
